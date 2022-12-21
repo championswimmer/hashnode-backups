@@ -59,7 +59,7 @@ Before you can publish, you need to ensure a few steps.
 
 1.  Create a Azure Devops organisation if you do not have one. [(Go here)](https://learn.microsoft.com/azure/devops/organizations/accounts/create-organization)
     
-2.  Get a Personal Access Token inside that organisation. This PAT must have `Marketplace > Manage` scope in it.  
+2.  Get a Personal Access Token inside that organisation. This PAT must have `Marketplace > Manage` scope in it.
     
     ![Personal settings menu](https://code.visualstudio.com/assets/api/working-with-extensions/publishing-extension/token1.png align="left")
     
@@ -92,3 +92,15 @@ vsce publish major # 1.0.0 increment
 
 > You'll get more detailed information including how to disable your extension or deprecate it, and get analytics data of it in the official docs  
 > [https://code.visualstudio.com/api/working-with-extensions/publishing-extension](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)
+
+## Links and References
+
+*   [https://github.com/championswimmer/vscode-theme-quieter-dark](https://github.com/championswimmer/vscode-theme-quieter-dark)  
+    source code of the extension I made  
+    
+    %[https://github.com/championswimmer/vscode-theme-quieter-dark] 
+    
+*   [https://marketplace.visualstudio.com/items?itemName=championswimmer.quieter-dark-color-theme](https://marketplace.visualstudio.com/items?itemName=championswimmer.quieter-dark-color-theme)  
+    published link of the extension  
+    
+    %[https://marketplace.visualstudio.com/items?itemName=championswimmer.quieter-dark-color-theme]
