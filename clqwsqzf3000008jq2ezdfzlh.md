@@ -8,11 +8,11 @@ tags: mouse, macos, mx-master
 
 ---
 
-I have been a longtime MX Master user. 5+ years with the MX Master 2S and not 1+ with MX Master 3. (I do not use the 3S because it has a different kind of receiver that doesn't let me use the same receiver for MX Keys)
+I have been a long-time MX Master user. 5+ years with the MX Master 2S and now 1+ with MX Master 3. (I do not use the 3S because it has a different kind of receiver that doesn't let me use the same receiver for MX Keys)
 
 One issue that has been plaguing me recently was that the cursor position was jittery, and when moving the mouse, the cursor was jumping around a bit.
 
-I noticed that it happend a lot more if I was having an additional external monitor attached.
+I noticed that it happened a lot more if I was having an additional external monitor attached.
 
 Just to note it down properly, here are the things I am using
 
@@ -38,4 +38,4 @@ So what solved the problem was a weird set of steps (I do not know why this solv
 
 If I have to hazard a guess, this way the actual hardware interface tracks the mouse much slower (hence less jumps) and the Logi Options+ driver translates that to bigger movements at the software layer. I do not know this for sure, and thus I do not know exactly why this set of steps fixes this problem, but that it does.
 
-Anyway documenting this mainly for myself to find this solution back again few years later when I update my Macbook to M4 Max or something and face this problem again I guess. If you faced the same and this solved for you, do leave a comment. Thanks :)
+Anyway, documenting this mainly for myself to find this solution back again few years later when I update my Macbook to M4 Max or something and face this issue again, I guess. If you faced the same and this solved for you, do leave a comment. Thanks :)
