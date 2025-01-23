@@ -216,7 +216,7 @@ To find the best position for the new person, we'll consider each possible place
 
 * **Best Position:**  4 (110**1**0110)
 * **Score:** 8
-    * (Stall 1: 1 point) + (Stall 2: 1 point) + (Stall 4: 4 points) + (Stall 6: 1 point) + (Stall 7: 1 point) = 8 
+    * (Stall 1: 1 point) + (Stall 2: 1 point) + (Stall 4: 4 points) + (Stall 6: 1 point) + (Stall 7: 1 point) = 8
 ```
 
 <div data-node-type="callout">
@@ -577,6 +577,53 @@ istration of the new person should be in the following stalls with the correspon
 <div data-node-type="callout-text">Finally, at least some correct answers! Except it did get the first input wrong. Position 7 is already occupied. But it got rest of the inputs correct and calculated the score correctly too! There’s a type/incomplete word “istration”, not sure how that happened in the output.</div>
 </div>
 
+### DeepSeek R1 671B
+
+The entire chain of thought is pasted here - [https://gist.github.com/championswimmer/361e91a8ead97c2afa85502d07bbf8fa](https://gist.github.com/championswimmer/361e91a8ead97c2afa85502d07bbf8fa). It “thought” for 4+ minutes, and generated 700+ lines of thoughts before giving the answer.
+
+```markdown
+**Answers**
+
+1. **Input: 01101010**  
+   **Position:** 1  
+   **Comfort Score:** 6  
+
+2. **Input: 11010101**  
+   **Position:** 3 (or 5 or 7)  
+   **Comfort Score:** 5  
+
+3. **Input: 11001011**  
+   **Position:** 5  
+   **Comfort Score:** 7  
+
+4. **Input: 00111100**  
+   **Position:** 1 or 8  
+   **Comfort Score:** 14  
+
+5. **Input: 01001010**  
+   **Position:** 7  
+   **Comfort Score:** 7  
+
+6. **Input: 11001110**  
+   **Position:** 8  
+   **Comfort Score:** 8  
+
+7. **Input: 10000110**  
+   **Position:** 3  
+   **Comfort Score:** 9  
+
+8. **Input: 11000110**  
+   **Position:** 7  
+   **Comfort Score:** 7  
+
+Each answer selects an optimal position (1-indexed) and the resulting maximum comfort score. If multiple positions yield the same score, any can be chosen.
+```
+
+<div data-node-type="callout">
+<div data-node-type="callout-emoji">💭</div>
+<div data-node-type="callout-text">Unfortunately, despite claims that R1 beats O1, at least for this question it got all the answers wrong. The chain of thought itself is an interesting piece of text. It keeps doing a bunch of <em>“oh wait, no…”</em> and keeps correcting itself, but it doesn’t really <strong><em>reason</em></strong> well at all and keeps faltering in its own chain of logic.</div>
+</div>
+
 ## Result Summary
 
 I don’t know about the “AGI” hype of o1, but it definitely marks itself a rank above the others, when faced with a net-new question, which it never faced in training data. If the chain-of-thought was published, it would definitely be intriguing to look at, but at least on the board it scores a 7:1 win, when the closest anyone else could do (Claude 3.5 Sonnet) was a 1:7 loss.
@@ -589,5 +636,14 @@ I don’t know about the “AGI” hype of o1, but it definitely marks itself a 
 | Gemini 2.0 Exp Adv | ❌ | Explained back the logic, but all calculations and answers wrong |
 | GPT 4o | ❌ | All calculations and answers wrong |
 | GPT o1 Preview | 1 ❌ 7 ✅ | &lt;think&gt; for 3 min. Explanations not given in final answers, but gave correct position and score for all inputs except the first one. |
+| DeepSeek R1 671B | ❌ | &lt;think&gt; for 4min, 700 lines. Final answers are all wrong. |
 
 If you try this prompt out with any open models like **DeepSeek R1**, **LLaMa, Mistral** etc, let me know in comments how did it go and did any of them solve it.
+
+## Bonus - *8 minutes of “thinking”*
+
+Just for run, here is `DeepSeek R1 Distilled Llama 7b` thinking for a whole 8 minutes
+
+%[https://www.youtube.com/watch?v=HioHAXgjSYk] 
+
+As is evident, just “CoT”ing your way out of incapable models does not really work. I don’t think a model can start reasoning just by forcing it to generate `<think>` blocks in its intermediate output and aligning it with reinforcement learning. Sure, it improves certain things, but it also opens you up to the jailbreak scenario where the *thoughts* spiral out of control, growing larger than the context, and thus pushing the original prompt out of the window, and the final answer having no relation to the actual prompt.
