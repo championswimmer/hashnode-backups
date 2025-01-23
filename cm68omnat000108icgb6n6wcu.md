@@ -1,8 +1,8 @@
 ---
-title: "Checking SotA LLM Models trying to solve a net-new LeetCode style puzzle"
+title: "Evaluating SotA LLM Models trying to solve a net-new LeetCode style puzzle"
 datePublished: Thu Jan 23 2025 01:56:40 GMT+0000 (Coordinated Universal Time)
 cuid: cm68omnat000108icgb6n6wcu
-slug: checking-sota-llm-models-trying-to-solve-a-net-new-leetcode-style-puzzle
+slug: evaluating-sota-llm-models-trying-to-solve-a-net-new-leetcode-style-puzzle
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/ln2J1t5zGYo/upload/13849f00e0ef2c4fc8e0df08b69a7f9e.jpeg
 tags: artificial-intelligence, model-evaluation, leetcode, llm
 
