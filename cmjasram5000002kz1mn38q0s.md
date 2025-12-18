@@ -14,6 +14,8 @@ It’s messy, but if you get the setup right, you get better performance for a f
 
 Here is how I break down the current state of AI coding going into 2026, and how to navigate the choices between mainstream giants (Cursor, Claude) and the new wave of open models (Minimax M2, Qwen3, Kimi K2).
 
+> NOTE: Parts of this article are written using Gemini 3 based on some of my rough notes on this topic.
+
 ## The Breakdown: The 3 Layers
 
 Just like we separate our frontend from our backend, the AI stack is now decoupled:
