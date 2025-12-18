@@ -1,8 +1,8 @@
 ---
-title: "Beyond Copilot, Cursor and Claude Code: The Unbunbled Coding AI Tools Stack"
+title: "Beyond Copilot, Cursor and Claude Code: The Unbundled Coding AI Tools Stack"
 datePublished: Thu Dec 18 2025 02:03:58 GMT+0000 (Coordinated Universal Time)
 cuid: cmjasram5000002kz1mn38q0s
-slug: beyond-copilot-cursor-and-claude-code-the-unbunbled-coding-ai-tools-stack
+slug: beyond-copilot-cursor-and-claude-code-the-unbundled-coding-ai-tools-stack
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1766016429361/722c2a48-afed-4f54-a26c-adb7b4709435.png
 tags: cursor, copilot, agentic-ai
 
